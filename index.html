@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <h1>Welcome to Grand Restaurant</h1>
+            <p>Exquisite tastes, Exceptional experiences!</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        
+        <div class="tabs">
+            <button class="tab-button" onclick="showMenu('soups')">Soups</button>
+            <button class="tab-button" onclick="showMenu('starters')">Starters</button>
+            <button class="tab-button" onclick="showMenu('salad')">Salads</button>
+            <button class="tab-button" onclick="showMenu('chinese')">Chinese</button>
+            <button class="tab-button" onclick="showMenu('south-indian')">South Indian</button>
+            <button class="tab-button" onclick="showMenu('non-veg')">Non-Veg</button>
+        </div>
+
+        <!-- Soups Section -->
+        <div id="soups" class="menu-items">
+            <h3>Soups</h3>
+            <label><input type="checkbox" class="menu-item" data-price="60" data-name="Manchow Soup"> Manchow Soup - ₹60</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="70" data-name="Cream of Tomato Soup"> Cream of Tomato Soup - ₹70</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="60" data-name="Hot and Sour Soup"> Hot and Sour Soup - ₹60</label><br>
+        </div>
+
+        <!-- Starters Section -->
+        <div id="starters" class="menu-items" style="display:none;">
+            <h3>Starters</h3>
+            <label><input type="checkbox" class="menu-item" data-price="70" data-name="Veg Manchurian Dry"> Veg Manchurian Dry - ₹70</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="80" data-name="Paneer Chilly Dry"> Paneer Chilly Dry - ₹80</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="80" data-name="Veg Seek Kebab"> Veg Seek Kebab - ₹80</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="100" data-name="Paneer Tikka"> Paneer Tikka - ₹100</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="100" data-name="Paneer Lasooni Tikka"> Paneer Lasooni Tikka - ₹100</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="120" data-name="Paneer Hariyali Tikka"> Paneer Hariyali Tikka - ₹120</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="120" data-name="Huchi Tulka Pahadi Kebab"> Huchi Tulka Pahadi Kebab - ₹120</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="20" data-name="Masala Papad"> Masala Papad - ₹20</label><br>
+        </div>
+
+        <!-- Salads Section -->
+        <div id="salad" class="menu-items" style="display:none;">
+            <h3>Salads</h3>
+            <label><input type="checkbox" class="menu-item" data-price="30" data-name="Green Salad"> Green Salad - ₹30</label><br>
+        </div>
+
+        <!-- Chinese Main Course Section -->
+        <div id="chinese" class="menu-items" style="display:none;">
+            <h3>Chinese Main Course</h3>
+            <label><input type="checkbox" class="menu-item" data-price="60" data-name="Veg Fried Rice"> Veg Fried Rice - ₹60</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="60" data-name="Veg Schezwan Rice"> Veg Schezwan Rice - ₹60</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="60" data-name="Veg Hakka Noodles"> Veg Hakka Noodles - ₹60</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="70" data-name="Veg Schezwan Noodles"> Veg Schezwan Noodles - ₹70</label><br>
+        </div>
+
+        <!-- South Indian Section -->
+        <div id="south-indian" class="menu-items" style="display:none;">
+            <h3>South Indian</h3>
+            <label><input type="checkbox" class="menu-item" data-price="30" data-name="Idly"> Idly - ₹30</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="60" data-name="Plain Dosa"> Plain Dosa - ₹60</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="70" data-name="Ghee Dosa"> Ghee Dosa - ₹70</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="50" data-name="Uttappam"> Uttappam - ₹50</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="80" data-name="Onion Uttappam"> Onion Uttappam - ₹80</label><br>
+        </div>
+
+        <!-- Non-Veg Section -->
+        <div id="non-veg" class="menu-items" style="display:none;">
+            <h3>Non-Veg</h3>
+            <label><input type="checkbox" class="menu-item" data-price="125" data-name="Chicken Biryani"> Chicken Biryani - ₹125</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="190" data-name="Mutton Biryani"> Mutton Biryani - ₹190</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="100" data-name="Egg Biryani"> Egg Biryani - ₹100</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="65" data-name="Biryani Rice"> Biryani Rice - ₹65</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="155" data-name="Chicken Fried Rice"> Chicken Fried Rice - ₹155</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="90" data-name="Egg Fried Rice"> Egg Fried Rice - ₹90</label><br>
+            <label><input type="checkbox" class="menu-item" data-price="75" data-name="Jeera Rice"> Jeera Rice - ₹75</label><br>
+        </div>
+
+        <button class="btn" onclick="calculateTotal()">Calculate Total</button>
+
+        <div id="total-amount">
+            <h3>Total Amount: ₹<span id="total-price">0</span></h3>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Grand Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
